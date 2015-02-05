@@ -17,9 +17,7 @@ var posts = require('./posts.js');
 var homeController = require('./controllers/home.js');
 var contentPagesController = require('./controllers/content.js');
 var postsController = require('./controllers/posts.js');
-var writingsController = require('./controllers/writings.js');
 var errorController = require('./controllers/404.js');
-// var artworkController = require('./controllers/random/artwork.js');
 
 app.set('port', (process.env.PORT || 5000))
 
@@ -38,13 +36,9 @@ app.set('view engine', 'jade');
 
 app.get('/', homeController.index)
 app.get('/about', contentPagesController.about)
-app.get('/the-library', contentPagesController.library)
-// app.get('/projects/:project', projectsController.project)
 app.get('/projects/:post', postsController.post)
-app.get('/writings/:writing', writingsController.writing)
 app.get('*', errorController.errorPage)
 
-// app.get('/artwork/:name', artworkController.index)
 
 
 app.listen(app.get('port'), function() {
