@@ -39,7 +39,6 @@
 		}
 	}
 	&.navigation--full-screen {
-		// z-index: -9999;
 		position: fixed;
 		left: 0;
 		top: 0;
@@ -110,10 +109,4 @@
 	to {
 		z-index: 99999
 	}
-}
-
-body.is-open-menu {
-	overflow: hidden;
-	height: 100%;
-	width: 100%;
 }
