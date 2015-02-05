@@ -1,10 +1,10 @@
 {
-  "name": "tjphilli.com",
+  "name": "node-starter",
   "version": "0.1.0",
   "author": "Trevor Phillippi",
   "repository": {
     "type": "git",
-    "url": "git://github.com/tjphilli/portfolio-app.git"
+    "url": "git://github.com/tjphilli/node-starter.git"
   },
   "dependencies": {
     "express": "^4.10.2",
@@ -38,7 +38,6 @@
     "jshint-stylish": "^0.2.0",
     "load-grunt-tasks": "~1.0.0",
     "node-sass": "~1.0.3",
-    "phantomjs": "^1.9.12",
     "time-grunt": "^0.3.1"
   },
   "engines": {

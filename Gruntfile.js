@@ -28,9 +28,9 @@ module.exports = function (grunt) {
     globalConfig: appConfig,
     s3: {
       options: {
-        accessKeyId: "AKIAIN3KORAFF62R4ZYA",
-        secretAccessKey: "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",
-        bucket: "new-portfolio",
+        accessKeyId: "",
+        secretAccessKey: "",
+        bucket: "",
         overwrite: true
       },
       move: {
@@ -383,7 +383,7 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'string-replace',
-    's3'
+    // 's3'
   ]);
 
   grunt.registerTask('default', [

@@ -2,7 +2,6 @@
   "name": "portfolio-app",
   "version": "1.0.0",
   "dependencies": {
-    "WOW": "~1.0.3"
   },
   "devDependencies": {},
   "appPath": "app"
