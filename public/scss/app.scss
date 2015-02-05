@@ -1,0 +1,35 @@
+@import "settings";
+@import "_variables.scss";
+@import "base";
+@import "_placeholders.scss";
+@import "layout";
+@import "_modules/_intro-section.scss";
+// @import "_modules/_browser-window.scss";
+@import "_modules/_navigation.scss";
+@import "_modules/_top-section.scss";
+@import "_modules/_animations.scss";
+@import "_modules/_btn.scss";
+// @import "_modules/_forms.scss";
+@import "_modules/_footer-section.scss";
+// @import "_modules/_blog-preview.scss";
+@import "_modules/_hamburger.scss";
+@import "_modules/_work.scss";
+@import "_modules/_logo-menu.scss";
+@import "_modules/_project-preview.scss";
+@import "_modules/_writing-preview.scss";
+@import "_modules/_project-detail.scss";
+@import "_modules/_tags.scss";
+@import "_modules/_footnotes.scss";
+@import "_modules/_post.scss";
+@import "fonts.scss";
+@import "../css/animate.css";
+
+@keyframes keyframe-name {
+	from {
+		// property: value;
+	}
+	to {
+		// property: value;
+	}
+}
+

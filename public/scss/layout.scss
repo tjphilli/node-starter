@@ -1,0 +1,73 @@
+// PURPOSE: Control layout and shifting between widths
+
+.internal {
+	max-width: 1170px;
+	margin: {
+		right: auto;
+		left: auto;
+	}
+	padding: 0 15px;
+	&.internal--medium-only {
+		@media #{$med-mq-max} {
+			padding: 0;
+		}
+	}
+}
+
+.main-content-container {
+	margin-top: 50px;
+	width: 100%;
+	margin-bottom: 25px;
+	float: none;
+	@media screen and (min-width: 768px) {
+		width: 70%;
+		margin-top: 100px;
+		margin-bottom: 100px;
+		float: left;
+	}
+}
+.auxiliary-content-container {
+	margin-top: 50px;
+	width: 100%; 
+	float: none;
+	@media screen and (min-width: 768px) {
+		width: 30%;
+		margin-top: 100px;
+		padding-left: 5%;
+		float: left;
+	}
+}
+
+.three-across-drop-to-one {
+	.two-across {
+		@media screen and (min-width: 780px) {
+			width: 66%;
+			float: left;
+		}
+		width: 100%;
+	}
+	.one-across {
+		@media screen and (min-width: 780px) {
+			width: 33%;
+			float: left;
+			@include clearfix();
+		}
+		width: 100%;
+	}
+}
+
+.two-across-drop-to-one {
+	.one-across {
+		@media screen and (min-width: 780px) {
+			width: 48%;
+			float: left;
+			position: relative;
+			&:first-child {
+				margin-right: 2%;
+				padding-right: 2%;
+			}
+		}
+		width: 100%;
+	}
+	@include clearfix();
+}

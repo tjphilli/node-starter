@@ -1,0 +1,110 @@
+// Purpose: Sets base styles for buttons
+
+.btn-wrapper {
+	width: 100%;
+}
+.btn {
+	display: inline-block;
+	padding: 10px 40px 12px;
+	// width: 100%;
+	color: #fff;
+	font-family: $sans-serif;
+	font-weight: 500;
+	font-size: 24px;
+	text-transform: uppercase;
+	appearance: none;
+	background-color: $tjp-blue;
+	transition: background-color 0.3s;
+	text-decoration: none;
+	&:hover {
+		cursor: pointer;
+		color: #fff;
+		background-color: darken($tjp-blue, 10%);
+	}
+	position: relative;
+	i {
+		vertical-align: middle;
+		position: absolute;
+		right: 10%;
+		top: 13px;
+		opacity: 0;
+		transform: translateX(-10px);
+		transition: transform 0.4s, opacity 0.3s;
+	}
+	span {
+		display: inline-block;
+		transition: transform 0.4s;
+	}
+	&:hover {
+		i {
+			opacity: 1;
+		}
+	}
+	&:active {
+		background-color: darken($tjp-blue, 15%);
+	}
+	&.btn--view-more {
+		&:hover {
+			i {
+				opacity: 1;
+				@media #{$med-mq-max} {
+					display: none;
+				}
+				@media #{$med-mq} {
+					transform: translateX(0);
+				}
+			}
+			span {
+				@media #{$med-mq} {
+					transform: translateX(-10px);
+				}
+			}
+		}
+		&:active {
+			i {
+				transform: translateX(6px);
+			}
+			span {
+				@media #{$med-mq} {
+					transform: translateX(-12px);
+				}
+			}
+		}	
+	}
+	&.btn--submit {
+		margin-top: 18px;
+	}
+	&.btn--icon {
+		[class^=icon] {
+			vertical-align: text-bottom;
+			font-size: 28px;
+			margin-right: 20px;
+		}
+	}
+	&.btn--inverted {
+		color: #fff;
+		border: 2px solid rgba(#fff, 0.5);
+		&:hover {
+			// color: $bgs-green;
+			background-color: #fff;
+		}
+	}
+	&.btn--coming-soon {
+		cursor: default;
+		@media #{$med-mq} {
+			color: darken($medium-grey, 20%);
+			background-color: transparent;
+			border: 2px solid darken($medium-grey, 20%);
+		}
+		@media #{$med-mq-max} {
+			color: darken(#fff, 13%);
+			background-color: darken(#fff, 32%);
+		}
+	}
+	&.btn--download {
+		background-color: $tjp-red;
+		&:hover {
+			background-color: mix($tjp-red, #555, 80%);
+		}
+	}
+}

@@ -1,0 +1,52 @@
+// PURPOSE: Control layout and shifting between widths
+
+.intro {
+	padding: {
+		top: 120px;
+		bottom: 80px;
+	}
+	background-color: #fff;
+	@include clearfix();	
+	text-align: center;
+	h1.page-title {
+		@media #{$med-mq} {
+			font-size: 48px;
+		}
+		@media #{$lrg-mq} {
+			font-size: 56px;
+		}
+	}
+	.note {
+		border-top: 1px solid #ddd;
+		padding-top: 24px;
+		margin-top: 22px;
+	}
+}
+
+.intro-copy {
+	margin: {
+		top: 40px;
+		bottom: 30px;
+	}
+	@media #{$med-mq} {	
+		margin: {
+			top: 50px;
+			bottom: 60px;
+		}
+	}
+	p {
+		// margin: 0 auto;
+
+		@media #{$med-mq} {
+			max-width: 50%;
+		}
+		font-size: 20px;
+		line-height: 1.55556;
+		@media #{$smed-mq} {
+			// font-size: 24px;
+			// line-height: 34px;
+		}
+		font-weight: 300;
+	}
+	text-align: left;
+}

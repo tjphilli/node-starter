@@ -1,0 +1,339 @@
+// PURPOSE: Styles the interactive and repsonsive project-previews
+// 			that display in the 'work' section of the homepage
+
+.project-preview {
+	padding: {
+		top: 60px;
+		bottom: 30px;
+	}
+	max-height: 700px;
+
+
+	@media #{$med-mq} {
+		max-height: 400px;
+		margin-top: 65px;
+	}
+	@media screen and (max-width: 520px) {
+		height: 280px;
+	}
+	@media #{$med-mq-max} {
+		position: relative;
+		margin: 0 10px 40px;
+		padding: 10px;
+		// background: $dark-grey;
+		background: #fff;
+		border: 1px solid #ccc;
+
+	}
+	@media screen and (min-width: 520px) and (max-width: $med) {
+		height: 368px;
+	}
+	overflow: hidden;
+	box-sizing: border-box;
+	border-bottom: 1px solid $light-grey;
+	@include clearfix();
+	
+	&:hover {
+		@media #{$med-mq-max} {
+			.project-preview-image img {
+				// transform: scale(1.02);
+			}
+		}
+	}
+
+	.project-preview-text {
+		@media #{$med-mq-max} {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10000;
+			width: 100%;
+			height: 100%;
+		}
+
+		@media #{$med-mq} {
+			float: left;
+			width: 47%
+		}
+		@media #{$lrg-mq} {
+			width: 40%;
+		}
+	}
+	.project-preview-body {
+		margin: 0;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 1.55556;
+		@media #{$smed-mq} {
+			font-size: 20px;
+		}
+		@media #{$med-mq-max} {
+			display: none;
+		}
+	}
+	.project-preview-title {
+		margin-bottom: 12px;
+		font-weight: 600;
+		font-size: 30px;
+		@media #{$smed-mq} {
+			font-size: 36px;
+		}
+		@media #{$med-mq-max} {
+			position: absolute;
+			top: 33%;
+			width: 100%;
+			text-align: center;
+			color: #fff;
+		}
+	}
+	.project-preview-action-container {
+		@media #{$med-mq-max} {
+			width: 100%;
+			padding: 0 10px;
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+			box-sizing: border-box;
+		}
+	}
+	.project-preview-action {
+		@media #{$med-mq-max} {
+			padding: 19px 0 19px;
+			width: 100%;
+			text-align: center;
+		}
+		@media #{$med-mq} {
+			margin: {
+				top: 40px;
+				bottom: 20px;
+			}
+		}
+	}
+	.project-preview-image {
+		width: 100%;
+		transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+		@media #{$med-mq-max} {
+			.project-preview-image-wrapper {
+				background: #444;
+			}
+			overflow: hidden;
+		}
+		@media screen and (min-width: 520px) and (max-width: $med) {
+			max-height: 270px;
+		}
+		@media screen and (max-width: 520px) {
+			max-height: 183px;
+		}
+		@media #{$med-mq} {
+			width: 50%;
+			float: right;
+		}
+		@media #{$lrg-mq} {
+			width: 60%;
+			float: left;
+		}
+		img {
+			@media #{$med-mq-max} {
+				opacity: 0.23;
+			}
+			transition: transform 0.3s;
+		}
+	}
+	.trump-image-wrapper {
+		// width:
+	}
+	&.l-flipped {
+		.project-preview-text {
+			float: right;
+		}
+		.project-preview-image {
+			@media #{$med-mq} {
+				float: left;
+				.project-preview-image-wrapper {
+					margin-left: 20px;
+				}
+			}
+			@media #{$lrg-mq} {
+				float: right;
+			}
+		}
+	}
+	&.trump {
+		@media #{$med-mq-max} {
+			.project-preview-image-wrapper {
+				background: mix($dark-grey, $trump, 82%);
+			}
+		}
+		.project-preview-image-wrapper {
+			margin-top: 55px;
+			margin-left: 20px;
+		}
+	}
+	&.bathchat {
+		@media #{$med-mq-max} {
+			.project-preview-image-wrapper {
+				background: mix($dark-grey, $bathchat, 85%);
+			}
+		}
+		.project-preview-image-wrapper {
+			margin-top: 55px;
+			margin-right: 20px;
+		}
+	}
+	&.picks {
+		@media #{$med-mq-max} {
+			.project-preview-image-wrapper {
+				background: mix($dark-grey, $picks, 65%);
+				img {
+					margin-top: -58% !important;
+				}
+			}
+		}
+		.project-preview-image-wrapper {
+			margin-top: 55px;
+			margin-right: 20px;
+		}
+	}
+	&.dlixd {
+		@media #{$med-mq-max} {
+			.project-preview-image-wrapper {
+				background: mix($dark-grey, $dlixd, 75%);
+			}
+		}
+	}
+	&.project-preview--web-app {
+		.project-preview-image-wrapper {
+			margin-top: 55px;
+			margin-right: 20px;
+			@media #{$med-mq-max} {
+				margin: 0;
+				img {
+					margin-top: -4%;
+					max-width: none;
+					width: 130%;
+				}
+			}
+		}
+		&:hover {
+			@media #{$med-mq} {
+				.project-preview-image {
+					transform: translateY(-23px);
+				}
+			}
+		}
+		&.resumazing:hover {
+			@media #{$med-mq} {
+				.project-preview-image {
+					transform: translateY(-55px);
+				}	
+			}
+		}
+		&.cdta:hover {
+			@media #{$med-mq} {
+				.project-preview-image {
+					transform: translateY(-36px);
+				}	
+			}
+		}
+	}
+	&.project-preview--mobile-app {
+		&:hover {
+			.project-preview-image {
+				@media #{$med-mq} {
+					transform: translateY(-23px);
+				}
+			}
+		}
+		&.bathchat:hover {
+			.project-preview-image {
+				@media #{$med-mq} {
+					transform: translateY(-103px);
+				}
+			}	
+		}
+		&.picks:hover {
+			.project-preview-image {
+				@media #{$med-mq} {
+					transform: translateY(-83px);
+				}
+			}	
+		}
+		.project-preview-image .project-preview-image-wrapper {
+			@media #{$med-mq-max} {
+				margin: 0;
+				img {
+					width: 120%;
+					max-width: none;
+					margin-left: -11%;
+					margin-top: -40%;
+				}
+			}
+		}
+	}
+	&.wwm {
+		@media #{$med-mq-max} {
+			.project-preview-image {	
+				background: mix($dark-grey, $wwm, 88%);
+			}
+		}
+		.project-preview-image {
+			transform-origin: 100px 100px;	
+			@media #{$med-mq-max} {
+				img {
+					margin-top: -110%;
+				}
+			}
+		}
+		@media #{$med-mq} {
+			&:hover {
+				.project-preview-image {
+					transform: translateY(-23px) rotateZ(1deg);
+				}	
+			}
+		}
+	}
+	&.resumazing {
+		@media #{$med-mq-max} {
+			.project-preview-image-wrapper {
+				background: mix($dark-grey, $resumazing, 80%);
+			}
+		}
+	}
+	&.gutenberg {
+		@media #{$med-mq-max} {
+			.project-preview-image-wrapper {
+				background: mix($dark-grey, $gutenberg, 82%);
+			}
+		}
+	}
+	&.cdta {
+		@media #{$med-mq-max} {
+			.project-preview-image-wrapper {
+				background: mix($dark-grey, $cdta, 88%);
+			}
+		}	
+	}
+	.tag {
+		@media #{$med-mq-max} {
+			position: absolute;
+			top: 45%;
+			width: 100%;
+			text-align: center;
+		}
+		@media #{$med-mq} {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+		transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s,opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s
+	}
+	&:hover {
+		.tag {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+		// .tag { animation: fadeInUp 1s; }
+	}
+}
+.project-preview:not(.l-flipped) .project-preview-image {
+	text-align: right;
+}

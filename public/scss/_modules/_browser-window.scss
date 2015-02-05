@@ -1,0 +1,19 @@
+// PURPOSE: Control layout and shifting between widths
+
+.browser-window {
+	width: 100%;
+	text-align: center;
+	margin-bottom: -3px;
+	@media #{$lrg-mq} {
+		position: absolute;
+		bottom: -3px;
+		right: 10px;
+		margin-bottom: 0;
+		width: 405px;
+	}
+	@media #{$xlg-mq} {
+		float: right;
+		width: 33%;
+	}
+	// background-color: #fff;
+}

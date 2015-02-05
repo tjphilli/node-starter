@@ -1,0 +1,55 @@
+// PURPOSE: Define common variables 
+
+// media queries
+
+
+//fonts
+$serif: 'calluna', Garamond, 'Times New Roman', serif;
+$sans-serif: 'Gotham SSm A', 'Gotham SSm B', 'freight-sans-pro', 'Helvetica', sans-serif;
+$myriad-condensed: 'lato', 'lato', verdana, arial, sans-serif;
+
+// colors 
+$tjp-blue: #4D729D;
+$tjp-red: #E06351;
+$tjp-blue-grey: #C1CEDD;
+$tjp-white-blue: #F6F8F9;
+
+// project-specific colors
+$picks: #A3D5A1;
+$wwm: #63C718;
+$trump: #D56D79;
+$dlixd: #F39C12;
+$gutenberg: #fff;
+$resumazing: #F5A623;
+$bathchat: #D3CB67;
+$sis: ;
+$cdta: #5C99DF;
+
+
+$off-white: #F2F2F2;
+$light-grey: #e7e7e7;
+$lightish-grey: #ddd;
+$medium-grey: #9B9B9B;
+$dark-grey: #4A4A4A;
+$black-grey: #222;
+// screen sizes
+
+$sml: 480px;
+$smed: 700px;
+$med: 820px;
+$large: 940px;
+$x-large: 1170px;
+
+//@media #{$smed-mq-max}{}
+
+$sml-mq: "screen and (min-width: #{$sml})";
+$smed-mq: "screen and (min-width: #{$smed})";
+$med-mq: "screen and (min-width: #{$med})";
+$lrg-mq: "screen and (min-width: #{$large})";
+$xlg-mq: "screen and (min-width: #{$x-large})";
+
+$sml-mq-max: "screen and (max-width: #{$sml})";
+$smed-mq-max: "screen and (max-width: #{$smed})";
+$med-mq-max: "screen and (max-width: #{$med})";
+$lrg-mq-max: "screen and (max-width: #{$large})";
+$xlg-mq-max: "screen and (max-width: #{$x-large})";

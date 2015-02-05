@@ -1,0 +1,42 @@
+// PURPOSE: Form general styling
+
+.input-wrapper {
+	width: 100%;
+	input {
+		width: 100%;
+		box-sizing: border-box;
+		font-size: 24px;
+		padding: 14px  10px;
+		border: 3px solid #aaa;
+	}
+	textarea {
+		width: 100%;
+		box-sizing: border-box;
+		font-size: 24px;
+		padding: 14px  10px;
+		border: 3px solid #aaa;
+		line-height: 33px;
+	}
+}
+
+.form-validation {
+	position: absolute;
+	left: -40px;
+	top: 25px;
+	color: $rz-green;
+
+}
+
+.btn-wrapper {
+	position: relative;
+}
+
+button[disabled="disabled"] {
+	// opacity: 0.5;
+	cursor: default !important;
+	background-color: grey !important;
+
+	&:hover {
+		background-color: grey !important;
+	}
+}

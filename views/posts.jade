@@ -1,0 +1,37 @@
+extend _layout
+block meta_tags
+	meta(name="title", content=title)
+	meta(name="description", content="#{post.post_teaser}")
+	
+	meta(property="og:title", content="#{post.post_title} || Trevor Phillippi")
+	meta(property="og:type", content="article")
+	meta(property="og:site_name", content="Trevor Phillippi, Product Designer")
+	meta(property="og:description", content="#{post.post_teaser}")
+	meta(property="og:image", content="#{url_base}#{post.post_image}")
+	meta(property="article:author", content="tjphilli")
+block title
+	=post.post_title
+block content
+	.project-detail.content-page
+		section.project-detail-intro
+			.internal
+				h1.content-page-title.project-detail-title #{post.post_title}
+				p.content-page-intro !{post.post_teaser}
+				div(class="#{post.post_image_bake}").project-detail-intro-image
+					img(src="#{url_base}#{post.post_image}")
+		main.project-detail-content
+			| !{html}
+		.post-pagination.navigation.navigation--basic
+			ul
+				li
+					-if (post.prev_post)
+						a(href="/projects/#{post.prev_post.post_route}").post-pagination-previous
+							span.label #{post.prev_post.post_title}
+							span.arrow
+								i.icon-arrow-left
+				li
+					-if (post.next_post)
+						a(href="/projects/#{post.next_post.post_route}").post-pagination-next
+							span.label #{post.next_post.post_title}
+							span.arrow
+								i.icon-arrow-right

@@ -1,0 +1,83 @@
+// PURPOSE: Sets the base styles for the application
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	min-height: 100%;
+	margin: 0;
+	font-family: $serif;
+	border-top: 6px solid $tjp-blue;
+}
+
+h1 {
+	margin-top: 0;
+	margin-bottom: 5px;
+	font-family: $sans-serif;
+	font-size: 1.875em;
+	font-weight: 600;
+	color: $dark-grey;
+	
+}
+	
+h2 {
+	margin-bottom: 25px;
+	font-family: $sans-serif;
+	font-size: 1.25em;
+	color: $dark-grey;
+}
+
+h3 {
+	margin-top: 0;
+	// font-family: $myriad;
+	font-size: 1.25em;
+	font-weight: 400;
+}
+
+p {
+	color: $dark-grey;
+	font-weight: 300;
+	a {
+		color: $tjp-blue;
+		&:hover {
+			color: $tjp-red;
+		}
+	}
+}
+
+a {
+	transition: color 0.3s;
+}
+
+hr {
+	margin: 50px 0;
+	&.home {
+		margin: {
+			top: 25px;
+			bottom: 25px;
+		}
+	}
+}
+
+img, video {
+	max-width: 100%;
+	height: auto;
+}
+
+// visibility classes
+
+.only {
+	display: none;
+	&.only--medium-down {
+		@media #{$med-mq-max} {
+			display: block;
+		}
+	}
+	&.only--medium-up {
+		@media #{$med-mq} {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,52 @@
+// PURPOSE: This file stores blocks of styles to be included
+
+%li-reset {
+	display: block;
+	float: left;
+}
+
+%ul-reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+
+%clearfix {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@mixin clearfix() {
+	&:after {
+		@extend %clearfix;
+	}
+}
+
+%caption-top-border {
+	margin-top: 0;
+	padding-top: 10px;
+	border-top: 5px solid #E6E6E6;
+	float: right;
+}
+%caption-top-border-reset {
+	margin-top: 6px;
+	padding-top: 0;
+	border-top: none;
+	float: none;
+}
+
+@mixin caption-top-border() {
+	margin-top: 0;
+	padding-top: 10px;
+	border-top: 5px solid #E6E6E6;
+	float: right;
+}
+
+@mixin caption-top-border-reset() {
+	margin-top: 6px;
+	padding-top: 0;
+	border-top: none;
+	float: none;
+}

@@ -1,0 +1,69 @@
+// PURPOSE: Styles blocky footer
+
+footer {
+	background-color: $tjp-blue;
+	padding: 90px 0;
+	color: #fff;
+	.copyright {
+		max-width: 350px;
+		padding: {
+			top: 9px;
+			bottom: 9px;
+		}
+		margin: 0 auto;
+		margin-top: 50px;
+		border: {
+			top: 1px solid rgba(#fff, 0.2);
+			bottom: 1px solid rgba(#fff, 0.2);
+		}
+		color: #fff;
+		text-align: center;
+		font-weight: 300;
+		font-size: 14px;
+	}
+	.about {
+		&:after {
+			content: '';
+			position: absolute;
+			width: 1px;
+			height: 100%;
+			background-color: rgba(#fff, 0.3);
+			right: 0;
+			top: 0;
+		}
+	}
+	section {
+		padding: {
+			top: 20px;
+			bottom: 20px;
+		}
+	}
+	.more {
+		nav.navigation.navigation--vertical-list {
+			margin-top: 20px;
+			ul {
+				width: 50%;
+				float: left;
+				li:not(.inactive) a:hover {
+					color: mix(#fff, $tjp-red, 10%);
+				}
+			}
+			@include clearfix();
+		}
+	}
+	.footer-section-title {
+		color: #fff;
+	}
+	.about {
+		.about-text, .about-title {
+			color: #fff;
+		}
+		.about-text {
+			font-size: 20px;
+			line-height: 1.55556;
+			font-weight: 300;
+		}
+		width: 50%;
+	}
+}
+

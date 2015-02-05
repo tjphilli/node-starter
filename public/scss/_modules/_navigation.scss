@@ -1,0 +1,126 @@
+// PURPOSE: Nav superclass sets defaults
+
+.navigation {
+	ul {
+		margin: 0;
+	}
+	li {
+		list-style: none;
+		&.inactive a {
+			opacity: 0.4;
+			cursor: default;
+		}
+	}
+	a {
+		transition: color 0.2s;
+		text-decoration: none;
+	}
+	&.navigation--inline {
+		display: inline-block;
+		li {
+			display: inline-block;
+			margin-left: 15px;
+		}
+	}
+	&.navigation--primary {
+		width: 100%;
+		text-align: center;
+		li {}
+		a {
+			color: #fff;
+			font-size: 40px;
+			@media #{$med-mq} {
+				font-size: 62px;
+			}
+			font-weight: 300;
+			line-height: 70px;
+			&:hover {
+				color: $tjp-red;
+			}
+		}
+	}
+	&.navigation--basic {
+		ul {
+			padding: 0;
+			margin: 0;
+		}
+	}
+	&.navigation--full-screen {
+		// z-index: -9999;
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		overflow: auto;
+		display: table;
+		width: 100%;
+		min-height: 100%;
+		height: 100%;
+		-webkit-overflow-scrolling: touch;
+		background-color: none;
+		transition: background-color 0.3s;
+		animation: zIndex 1s;
+		animation-fill-mode: forwards;
+		ul {
+			min-height: 100%;
+			display: table-cell;
+			vertical-align: middle;
+			padding-left: 0;
+			animation: fadeOutUp 0.8s;
+			animation-fill-mode: forwards;
+		}
+		&.is-active {
+			z-index: 99999;
+			background-color: rgba($tjp-blue, 0.95);
+			animation: zIndexBack 1s;
+			ul {
+				visibility: visible;
+				animation: fadeInDown 0.8s;
+			}
+		}
+		&.has-not-been-triggered {
+			display: none;
+		}
+	}
+	&.navigation--vertical-list {
+		ul {
+			@extend %ul-reset;
+
+		}
+		a {
+			font-size: 20px;
+			line-height: 30px;
+			color: #fff;
+			&:hover {
+				color: darken(#fff, 10%);
+			}
+		}
+		li {}
+	}
+	
+}
+
+@keyframes zIndex {
+	from {
+		z-index: 99999
+	} 
+	to {
+		z-index: -9999
+	}
+}
+
+@keyframes zIndexBack {
+	from {
+		z-index: -9999
+	} 
+	to {
+		z-index: 99999
+	}
+}
+
+body.is-open-menu {
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
