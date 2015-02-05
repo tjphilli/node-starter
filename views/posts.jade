@@ -25,13 +25,13 @@ block content
 			ul
 				li
 					-if (post.prev_post)
-						a(href="/projects/#{post.prev_post.post_route}").post-pagination-previous
+						a(href="/posts/#{post.prev_post.post_route}").post-pagination-previous
 							span.label #{post.prev_post.post_title}
 							span.arrow
 								i.icon-arrow-left
 				li
 					-if (post.next_post)
-						a(href="/projects/#{post.next_post.post_route}").post-pagination-next
+						a(href="/posts/#{post.next_post.post_route}").post-pagination-next
 							span.label #{post.next_post.post_title}
 							span.arrow
 								i.icon-arrow-right

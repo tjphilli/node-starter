@@ -4,7 +4,7 @@ html(class="no-js option-3")
 		title 
 			block title
 				=title
-			|  || Trevor Phillippi
+			|
 		block meta_tags
 			
 		meta(name="viewport", content="initial-scale=1")
@@ -13,7 +13,7 @@ html(class="no-js option-3")
 		<link rel="stylesheet" href="/css/app.css">
 		//- <link rel="stylesheet" href="/css/animate.css">
 		<!-- endbuild -->
-		include _includes/typekit.html
+		include _includes/font-foundries.html
 		//- script(src="/bower_components/modernizr/modernizr.js")
 		script(src="http://localhost:35729/livereload.js")
 		block header_scripts
@@ -24,7 +24,6 @@ html(class="no-js option-3")
 
 		<!-- build:js({__rendered/public, .}) /js/lib.js -->
 		script(src="/bower_components/jquery/dist/jquery.min.js")
-		script(src="/bower_components/WOW/dist/wow.min.js")
 		<!-- endbuild -->
 
 		<!-- build:js({.tmp, .}) /js/build.js -->
@@ -32,4 +31,3 @@ html(class="no-js option-3")
 		<!-- endbuild -->
 		include _includes/ga.html
 		block footer_scripts
-			include _includes/gfy.html

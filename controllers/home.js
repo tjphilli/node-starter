@@ -3,7 +3,7 @@ var globals = require('../models/globals');
 
 exports.index = function(req, res) {
   	res.render('home', {
-	    title: 'Design Portfolio',
+	    title: globals.siteName(),
 	    url_base: globals.contentUrlbase()
 	  });
 };

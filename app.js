@@ -36,7 +36,7 @@ app.set('view engine', 'jade');
 
 app.get('/', homeController.index)
 app.get('/about', contentPagesController.about)
-app.get('/projects/:post', postsController.post)
+app.get('/posts/:post', postsController.post)
 app.get('*', errorController.errorPage)
 
 
