@@ -8,8 +8,8 @@ var faviconm
 var http = require('http');
 var app = express();
 var favicon = require('serve-favicon');
-var globals = require('./globals.js');
-var posts = require('./posts.js');
+var globals = require('./models/globals.js');
+var posts = require('./models/posts.js');
 
 
 

@@ -1,4 +1,4 @@
-var globals = require('../globals');
+var globals = require('../models/globals');
 
 
 exports.errorPage = function(req, res) {

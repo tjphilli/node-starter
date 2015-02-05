@@ -1,6 +1,6 @@
-var posts = require('../posts');
+var posts = require('../models/posts');
 var marked = require('marked');
-var globals = require('../globals');
+var globals = require('../models/globals');
 
 
 exports.post = function(req, res) {

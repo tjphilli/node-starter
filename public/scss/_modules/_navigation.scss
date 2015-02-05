@@ -24,16 +24,9 @@
 	}
 	&.navigation--primary {
 		width: 100%;
-		text-align: center;
 		li {}
 		a {
-			color: #fff;
-			font-size: 40px;
-			@media #{$med-mq} {
-				font-size: 62px;
-			}
 			font-weight: 300;
-			line-height: 70px;
 			&:hover {
 				color: $tjp-red;
 			}
