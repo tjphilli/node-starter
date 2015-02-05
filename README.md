@@ -2,6 +2,8 @@
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
 
+This is a work in progress that I use for cloning new projects. It is based off of (my portfolio site)[http://tjphilli.com] so many colors, type settings, content, etc are artifacts of that. 
+
 
 ## Running Locally
 
